@@ -22,6 +22,9 @@ define('APP_DEBUG', true);
 // 定义应用目录
 define('APP_PATH', './server/Application/');
 
+// 更改模板路径
+define('TMPL_PATH','./dist/');
+
 // 引入ThinkPHP入口文件
 require './server/ThinkPHP/ThinkPHP.php';
 

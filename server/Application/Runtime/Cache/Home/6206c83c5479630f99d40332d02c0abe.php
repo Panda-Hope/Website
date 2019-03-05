@@ -1,4 +1,4 @@
-<html>
+<?php if (!defined('THINK_PATH')) exit();?><html>
 <head>
     <meta charset="UTF-8">
     <meta lang="zh-cn">
