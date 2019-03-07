@@ -1,7 +1,7 @@
 .content-body {
     display: flex;
     position: relative;
-    margin: 50px auto 0;
+    margin: 150px auto 0;
     padding: 20px;
     max-width: 1200px;
     min-width: 1000px;
@@ -34,6 +34,11 @@
             padding: 30px;
             border-radius: 4px;
             box-shadow: 0 20px 50px rgba(26, 26, 26, 0.2);
+            transition: transform .25s ease;
+            
+            &:hover {
+                transform: scale(1.08);
+            }
         
             .cover {
                 height: 325px;
@@ -61,4 +66,8 @@
 
 .foot {
     text-align: center;
+    .beian {
+        display: inline-block;
+        height: 40px;
+    }
 }

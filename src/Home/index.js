@@ -73,7 +73,7 @@ class Home extends Component<HomeProps> {
                     </div>
                 </div>
                 <div className={"foot"}>
-                    <span>备案：湘ICP备19002864号</span>
+                    <span className={"beian"}>备案：湘ICP备19002864号</span>
                 </div>
             </div>
         );
