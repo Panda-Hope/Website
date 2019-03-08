@@ -11,7 +11,7 @@ class IndexController extends Controller
         $regex = $_POST['regex'];
         $test = $_POST['test'];
 
-        exec("$dir/Regex-Resolver/output $regex $test", $result);
+        exec("$dir/Regex-Resolver/output \'$regex\' \'$test\'", $result);
 
         $this->ajaxReturn(
             array('result'=> $result[0])
