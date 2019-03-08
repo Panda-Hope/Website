@@ -41,14 +41,14 @@ class CommonHead extends Component<CommonHeadProps, CommonHeadState> {
             <div className={"common-head"}>
                 <div className={"content"}>
                     <div className={"title"}>
-                        <img src={title} />
+                        <img alt="Hope的个人博客" src={title} />
                         <div className={"avatar"}>
                             <a className={["link", this.state.imgAnimate].join(" ")}
                                href={"https://github.com/Panda-Hope"}
                                title="我的github"
                                onMouseEnter={() => this.toggleImg("enter")}
                                onMouseLeave={() => this.toggleImg("leave")}>
-                                <img src={this.state.img} />
+                                <img alt="头像" src={this.state.img} />
                             </a>
                         </div>
                     </div>

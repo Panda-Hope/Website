@@ -1,5 +1,6 @@
 // @flow
 import React, { Component } from "react";
+import { Link } from "react-router-dom";
 import "./index.scss";
 import CommonHead from "../Head/index";
 import QQMusic from "../images/qqmusic.png";
@@ -18,13 +19,13 @@ class Home extends Component<HomeProps> {
 
     render() {
         return (
-            <div className={"App"}>
+            <>
                 <CommonHead></CommonHead>
                 <div className={"content-body"}>
                     <div className={"aphorism-left"}></div>
                     <div className={"aphorism-right"}></div>
                     <div className={"project-wrapper"}>
-                        <a href="">
+                        <a href="/">
                             <div className={"project"}>
                                 <div className={"cover"}>
                                     <img src={QQMusic} alt="VueDataTable" />
@@ -36,7 +37,7 @@ class Home extends Component<HomeProps> {
                         </a>
                     </div>
                     <div className={"project-wrapper"}>
-                        <a href="">
+                        <Link to="/regex">
                             <div className={"project"}>
                                 <div className={"cover"}>
                                     <img src={C} alt="正则表达式解析器" />
@@ -45,10 +46,10 @@ class Home extends Component<HomeProps> {
                                     <span className={"title"}>基于NFA(不确定有穷自动机)与自底向上语法分析构造的正则表达式解析器</span>
                                 </div>
                             </div>
-                        </a>
+                        </Link>
                     </div>
                     <div className={"project-wrapper"}>
-                        <a href="">
+                        <a href="/">
                             <div className={"project"}>
                                 <div className={"cover"}>
                                     <img src={QQMusic} alt="Game" />
@@ -75,7 +76,7 @@ class Home extends Component<HomeProps> {
                 <div className={"foot"}>
                     <span className={"beian"}>备案：湘ICP备19002864号</span>
                 </div>
-            </div>
+            </>
         );
     }
 }
