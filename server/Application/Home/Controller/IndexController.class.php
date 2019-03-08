@@ -1,7 +1,7 @@
 <?php
 namespace Home\Controller;
 
-use Think\Controiller;
+use Think\Controller;
 
 class IndexController extends Controller
 {
@@ -14,7 +14,7 @@ class IndexController extends Controller
         exec("$dir/Regex-Resolver/output $regex $test", $result);
 
         $this->ajaxReturn(
-            array('result'=> $$result[0])
+            array('result'=> $result[0])
         );
     }
 }
