@@ -12,7 +12,7 @@ class IndexController extends Controller
         $test = $_GET['test'];
 
         exec("$dir/Regex-Resolver/output '$regex' '$test'", $result);
-
+	
         $this->ajaxReturn(
             array('result'=> $result[0])
         );
