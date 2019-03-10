@@ -1,17 +1,42 @@
 // @flow
 import React, { Component } from "react";
 import CommonHead from "../Head/index";
+import axios from "axios";
 import "./index.scss";
 
 type RegexProps = {};
-type RegexState = {};
+type RegexState = {
+    result: string
+};
 
 class Regex extends Component<RegexProps, RegexState> {
+    regexInput: Object;
+    testInput: Object;
+
     constructor(props: RegexProps) {
         super(props);
 
-        this.state = {};
+        this.state = {
+            result: "true"
+        };
+        this.regexInput = React.createRef();
+        this.testInput = React.createRef();
     }
+
+    regexCheck = () => {
+        if (!this.regexInput.current.value) return;
+
+        axios.get("http://api.liangljuan.com/", {
+            params: {
+                regex: this.regexInput.current.value,
+                test: this.testInput.current.value
+            }
+        }).then(res => {
+            this.setState({
+                result: res.data.result
+            });
+        });
+    };
 
     render() {
         return (
@@ -46,21 +71,20 @@ class Regex extends Component<RegexProps, RegexState> {
                             <dt><h4>例子:</h4></dt>
                             <dd>
                                 <ul>
-                                    <li>(a): 创建一个子正则表达式a</li>
-                                    <li>a* : 匹配多次或零次</li>
-                                    <li>a|b: 匹配a或者b</li>
+                                    <li>正则表达式：(a|b)*c <span style={{marginLeft: "15px"}}>测试字符串："aabbbc"</span></li>
+                                    <li>正则表达式：\d+|\s <span style={{marginLeft: "22px"}}>测试字符串："9 "</span></li>
                                 </ul>
                             </dd>
                         </dl>
                         <div className="online-test">
                             <div className="input-wrapper">
                                 <span className="desc">正则表达式：</span>
-                                <input type="input" name="regex" placeholder="" />
+                                <input onInput={this.regexCheck} ref={this.regexInput} type="input" name="regex" placeholder="例如：(a|b)\d+" />
                                 <span className="desc top">测试字符串：</span>
-                                <input type="input" name="string" />
+                                <input onInput={this.regexCheck} ref={this.testInput} type="input" name="string" placeholder="例如：a1234" />
                             </div>
-                            <button className="play" title="测验" onMouseEnter={e => e.target.classList.add("active")} onMouseLeave={e => e.target.classList.remove("active")}></button>
-                            <span className="result">true</span>
+                            <button onClick={this.regexCheck} className="play" title="测验" onMouseEnter={e => e.target.classList.add("active")} onMouseLeave={e => e.target.classList.remove("active")}></button>
+                            <span className="result">{this.state.result}</span>
                         </div>
                         <div className="tail-intro">
                             <span>关于正则表达式的更多设计原理，详情请查看 </span>
