@@ -1,3 +1,1 @@
-[sss][]
-
-[]: https://baidu.com
+http://liangljuan.com/

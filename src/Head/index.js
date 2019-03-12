@@ -60,18 +60,18 @@ class CommonHead extends Component<CommonHeadProps, CommonHeadState> {
                                 <span className={"name"}>首页</span>
                             </Link>
                         </div>
-                        <div className={"item"}>
-                            <Link to={"/myfoot"}>
-                                <span className={"icon foot"}></span>
-                                <span className={"name"}>我的足迹</span>
-                            </Link>
-                        </div>
-                        <div className={"item"}>
-                            <Link to={"/music"}>
-                                <span className={"icon music"}></span>
-                                <span className={"name"}>音乐</span>
-                            </Link>
-                        </div>
+                        {/*<div className={"item"}>*/}
+                            {/*<Link to={"/myfoot"}>*/}
+                                {/*<span className={"icon foot"}></span>*/}
+                                {/*<span className={"name"}>我的足迹</span>*/}
+                            {/*</Link>*/}
+                        {/*</div>*/}
+                        {/*<div className={"item"}>*/}
+                            {/*<Link to={"/music"}>*/}
+                                {/*<span className={"icon music"}></span>*/}
+                                {/*<span className={"name"}>音乐</span>*/}
+                            {/*</Link>*/}
+                        {/*</div>*/}
                     </div>
                 </div>
             </div>

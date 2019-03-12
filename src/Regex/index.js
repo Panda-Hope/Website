@@ -3,7 +3,6 @@ import React, { Component } from "react";
 import CommonHead from "../Head/index";
 import axios from "axios";
 import "./index.scss";
-
 type RegexProps = {};
 type RegexState = {
     result: string
@@ -49,6 +48,7 @@ class Regex extends Component<RegexProps, RegexState> {
                             <dt><h4>数据类型:</h4></dt>
                             <dd>
                                 <ul>
+                                    <li>\ : 字符转意符</li>
                                     <li>. : 匹配任意一个非换行符符号</li>
                                     <li>\d: 匹配0~9的数字</li>
                                     <li>\t: 匹配制表符</li>
@@ -79,7 +79,7 @@ class Regex extends Component<RegexProps, RegexState> {
                         <div className="online-test">
                             <div className="input-wrapper">
                                 <span className="desc">正则表达式：</span>
-                                <input onInput={this.regexCheck} ref={this.regexInput} type="input" name="regex" placeholder="例如：(a|b)\d+" />
+                                <input onInput={this.regexCheck} ref={this.regexInput} type="input" name="regex" placeholder="例如：(a|b)\d*" />
                                 <span className="desc top">测试字符串：</span>
                                 <input onInput={this.regexCheck} ref={this.testInput} type="input" name="string" placeholder="例如：a1234" />
                             </div>
