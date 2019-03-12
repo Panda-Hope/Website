@@ -1,0 +1,77 @@
+.doc-wrapper {
+    position: relative;
+    margin: 150px auto 0;
+    max-width: 1200px;
+    
+    .directory-wrapper {
+        position: fixed;
+        width: 240px;
+        top: 150px;
+        bottom: 0;
+        
+        .side-bar {
+            list-style: none;
+            
+            > li {
+                > a {
+                    display: block;
+                    height: 40px;
+                    color: #444;
+                    line-height: 40px;
+                    font-size: 14px;
+                    overflow: hidden;
+                    white-space: nowrap;
+                    text-overflow: ellipsis;
+                    font-weight: 400;
+    
+                    &.title {
+                        font-size: 20px;
+                        color: #333;
+                    }
+                    
+                    &:hover, &.title:hover, &.active {
+                        color: #409eff;
+                    }
+                }
+            }
+        }
+    }
+    
+    .doc-body {
+        padding-left: 270px;
+        
+        p {
+            font-size: 14px;
+            color: #5e6d82;
+            line-height: 18px;
+        }
+        
+        .tag {
+            color: #409eff;
+        }
+        
+        .js-code {
+            line-height: 1.8;
+            font-family: Menlo,Monaco,Consolas,Courier,monospace;
+            font-size: 12px;
+            padding: 18px 24px;
+            background-color: #fafafa;
+            border: 1px solid #eaeefb;
+            margin-bottom: 25px;
+            border-radius: 4px;
+            color: #000;
+            display: block;
+            overflow-x: auto;
+            
+            > p {
+                margin: 0;
+                line-height: 30px;
+            }
+        }
+    }
+    
+    .beian {
+        margin-top: 80px;
+        text-align: center;
+    }
+}
