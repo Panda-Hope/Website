@@ -3,8 +3,12 @@ import React, { Component } from "react";
 import {Link, Route, Switch} from "react-router-dom";
 import CommonHead from "../Head/index";
 import FixedTable from "./fixed-table";
+import Group from "./group";
 import Preface from "./preface";
 import Start from "./start";
+import Sort from './sort';
+import Custom from './custom';
+import DataMap from './datamap';
 import "./index.scss";
 
 type DatabTableProps = {
@@ -33,6 +37,26 @@ class DataTable extends Component<DatabTableProps, DatabTableState> {
                 path: "/datatable/fixed-table",
                 component: FixedTable,
                 name: "固定表头 & 固定列"
+            },
+            {
+                path: "/datatable/group",
+                component: Group,
+                name: "表头分组 & 动态表格"
+            },
+            {
+                path: "/datatable/sort",
+                component: Sort,
+                name: "多选 & 排序"
+            },
+            {
+                path: "/datatable/custom",
+                component: Custom,
+                name: "自定义表头 & 模板"
+            },
+            {
+                path: "/datatable/datamap",
+                component: DataMap,
+                name: "DataMap 数据映射"
             }
         ];
     }

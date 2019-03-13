@@ -22,7 +22,7 @@ class Preaface extends Component<PreafaceProps>{
                 <p>DataTable通过 <Link to="/datatable" className="tag">Create</Link> API来创建一个新的表格类，DataTable将此API视为一个模板函数，</p>
                 <p>每一次调用DataTable将会创建出一个新的表格类，这意味着您可以一次调用，多次使用。例如：</p>
                 <iframe width="100%" height="370" src="//jsfiddle.net/MapleStory/zL8cx45p/44/embedded/result,js"
-                        allowFullScreen="allowfullscreen" allowpaymentrequest frameBorder="0"></iframe>
+    allowFullScreen="allowfullscreen" allowpaymentrequest frameBorder="0"/>
                 <p>
                     DataTable使用
                     <a href="https://github.com/vuejs/babel-plugin-transform-vue-jsx" className="tag"> vue-jsx </a>
