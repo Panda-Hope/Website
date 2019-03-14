@@ -22,8 +22,12 @@ export default function () {
 
             <h3>带边框表格</h3>
             <p>为实例的表格添加<span className="prop"> border </span>属性即可</p>
-            <iframe width="100%" height="300" src="//jsfiddle.net/MapleStory/zL8cx45p/61/embedded/result,html/"
+            <iframe width="100%" height="360" src="//jsfiddle.net/MapleStory/zL8cx45p/61/embedded/result,html/"
     allowFullScreen="allowfullscreen" allowpaymentrequest frameBorder="0"/>
+
+            <h3>表格行 Class</h3>
+            <iframe width="100%" height="400" src="//jsfiddle.net/MapleStory/zL8cx45p/225/embedded/result,html,css"
+                    allowFullScreen="allowfullscreen" allowpaymentrequest frameBorder="0"></iframe>
         </>
     );
 }

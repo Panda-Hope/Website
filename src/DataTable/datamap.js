@@ -30,7 +30,11 @@ export default function () {
             <iframe width="100%" height="400" src="//jsfiddle.net/MapleStory/zL8cx45p/200/embedded/result,js"
                     allowFullScreen="allowfullscreen" allowpaymentrequest frameBorder="0"></iframe>
 
-            <p>关于更多的关于<span className="tag">DataMap</span>的使用，您可以查看DataTable的<a className="tag" href="https://github.com/Panda-Hope/Vue-DataTable/tree/master/src/data-map">内置数据映射</a></p>
+            <p>
+                您可以通过<span className="tag"> DataMap </span>来实现许多数据对视图的映射，例如：自定义模板、组件、全局数据格式化、过滤等等。
+            </p>
+            <p><span className="tag">DataMap </span>作为DataTable的核心理念，目前仍处于扩展之中，未来将会支持更多的视图映射方式。</p>
+            <p>关于更多的关于<span className="tag"> DataMap </span>的使用，您可以查看DataTable的<a className="tag" href="https://github.com/Panda-Hope/Vue-DataTable/tree/master/src/data-map">内置数据映射</a></p>
         </>
     );
 }

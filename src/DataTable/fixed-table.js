@@ -14,11 +14,12 @@ export default function () {
             <p>表格属性<span className="prop"> scroll-width: number </span>用于设置表格滚动宽度，当表格实际宽度小于此值时表格便会水平滚动。</p>
             <p>列属性<span className="prop"> fixed: "left" | "right" | undefined </span>用于设置表格列是否固定。</p>
 
-            <iframe width="100%" height="300" src="//jsfiddle.net/MapleStory/zL8cx45p/97/embedded/result,html,js"
+            <iframe width="100%" height="300" src="//jsfiddle.net/MapleStory/zL8cx45p/228/embedded/result,html,js"
     allowFullScreen="allowfullscreen" allowpaymentrequest frameBorder="0"/>
 
             <h3>固定表头 & 固定列</h3>
-            <iframe width="100%" height="400" src="//jsfiddle.net/MapleStory/zL8cx45p/104/embedded/result,html,js"
+            <p>固定表头可以与固定列同时使用，只需同时在表格实例上添加这两个属性即可。</p>
+            <iframe width="100%" height="400" src="//jsfiddle.net/MapleStory/zL8cx45p/234/embedded/result,html,js"
     allowFullScreen="allowfullscreen" allowpaymentrequest frameBorder="0"/>
 
             <h3>DataTable 表格布局</h3>

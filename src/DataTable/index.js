@@ -9,6 +9,7 @@ import Start from "./start";
 import Sort from './sort';
 import Custom from './custom';
 import DataMap from './datamap';
+import Third from "./third";
 import "./index.scss";
 
 type DatabTableProps = {
@@ -57,9 +58,18 @@ class DataTable extends Component<DatabTableProps, DatabTableState> {
                 path: "/datatable/datamap",
                 component: DataMap,
                 name: "DataMap 数据映射"
+            },
+            {
+                path: "/datatable/third",
+                component: Third,
+                name: "与第三方UI整合"
             }
         ];
     }
+
+    resetScroll = () => {
+        document.documentElement.scrollTop = 0;
+    };
 
     render() {
         return (
@@ -70,7 +80,15 @@ class DataTable extends Component<DatabTableProps, DatabTableState> {
                         <ul className="side-bar">
                             <li>
                                 {
-                                    this.paths.map((item, index) => <Link key={index} to={item.path} className={["title", item.path === this.props.location.pathname && "active"].join(" ")}>{item.name}</Link>)
+                                    this.paths.map(
+                                        (item, index) =>
+                                            <Link key={index}
+                                                  to={item.path}
+                                                  className={["title", item.path === this.props.location.pathname && "active"].join(" ")}
+                                                  onClick={this.resetScroll}>
+                                                {item.name}
+                                            </Link>
+                                    )
                                 }
                             </li>
                         </ul>

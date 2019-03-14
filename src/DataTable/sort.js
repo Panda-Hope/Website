@@ -36,7 +36,7 @@ export default function() {
                 来设置默认排序函数，注意这意味着这会覆盖 order=undefined 时的
             </p>
             <p>默认排序函数，不过 "ascending"、"descending"仍会起作用。</p>
-            <iframe width="100%" height="400" src="//jsfiddle.net/MapleStory/zL8cx45p/167/embedded/result,js,html"
+            <iframe width="100%" height="400" src="//jsfiddle.net/MapleStory/zL8cx45p/236/embedded/result,js,html"
     allowFullScreen="allowfullscreen" allowpaymentrequest frameBorder="0"/>
         </>
     );
